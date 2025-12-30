@@ -37,3 +37,18 @@ function limparDisplay() {
 function apagarUltimo() {
     display.value = display.value.slice(0, -1);
 }
+function adicionarPonto(ponto) {
+    const valor = display.value;
+
+    // Verifica se já existe um ponto na parte atual do número
+    const partes = display.value.split(/[\+\-\x\÷]/);
+    const ultimoNumero = partes[partes.length - 1];
+    // Se já houver um ponto no último número, não adiciona outro
+    if (ultimoNumero.includes('.')) 
+        return;
+        // Se o display estiver vazio ou o último caractere for um operador, não adiciona o ponto
+        if (valor === '' || '+-x÷/'.includes(valor.slice(-1))) {
+            return;
+        }
+    display.value += ponto;
+}
