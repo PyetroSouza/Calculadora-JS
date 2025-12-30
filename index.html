@@ -12,33 +12,36 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Anton&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
     <h1>Calculadora</h1>
     <div class="calculadora">
-        <div id="display"></div>
+        <input type="text" id="display" disabled>
+        </input>
         <div class="botoes">
+            <input type="button" value="C" onclick="limparDisplay()">
+            <input type="button" value="⌫" onclick="apagarUltimo()">
+            <input type="button" value="÷" onclick="adicionarOperador('÷')">
+            <input type="button" value="x" onclick="adicionarOperador('x')">
             <input type="button" value="7" onclick="adicionarNumero('7')">
             <input type="button" value="8" onclick="adicionarNumero('8')">
             <input type="button" value="9" onclick="adicionarNumero('9')">
-            <input type="button" value="-" onclick="adicionarOperacao('-')">
+            <input type="button" value="-" onclick="adicionarOperador('-')">
             <input type="button" value="4" onclick="adicionarNumero('4')">
             <input type="button" value="5" onclick="adicionarNumero('5')">
             <input type="button" value="6" onclick="adicionarNumero('6')">
-            <input type="button" value="x" onclick="adicionarOperacao('x')">
+            <input type="button" value="+" onclick="adicionarOperador('+')">
+
             <input type="button" value="1" onclick="adicionarNumero('1')">
             <input type="button" value="2" onclick="adicionarNumero('2')">
             <input type="button" value="3" onclick="adicionarNumero('3')">
-            <input type="button" value="÷" onclick="adicionarOperacao('÷')">
-            <input type="button" value="0" onclick="adicionarNumero('0')">
-            <input type="button" value="." onclick="adicionarOperacao('.')">
             <input type="button" value="=" onclick="calcularResultado()">
-            <input type="button" value="+" onclick="adicionarOperacao('+')">
-            <input type="button" value="⌫" onclick="apagarUltimo()">
-            <input type="button" value="C" onclick="limparDisplay()">
-            
+
+            <input type="button" value="0" onclick="adicionarNumero('0')">
+            <input type="button" value="." onclick="adicionarOperador('.')">
+
 
         </div>
 </body>
