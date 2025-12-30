@@ -60,4 +60,9 @@ input[type="button"]:active {
 input#display:disabled {
     pointer-events: none;
 }
-
+footer {
+    text-align: center;
+    font-style: italic;
+    margin-top: 20px;
+    font-family: 'Google Sans', sans-serif;
+}
